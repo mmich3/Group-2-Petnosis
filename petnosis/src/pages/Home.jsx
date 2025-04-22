@@ -1,17 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css';
 
 function Home() {
   return (
-    <div className='min-h-screen w-75 bg-[#fff6ed]'>
-      <div className='hero min-h-screen'>
-        <div className='hero-content text-neutral-content text-center'>
-          <div className='flex max-w-md flex-col items-center'>
-            <h1 className='mb-5 text-5xl font-bold text-[#ca9973]'>Welcome!</h1>
-            <button className='btn btn-success mb-5'>Pet Diagnosis</button>
-            <button className='btn btn-info mb-5'>Find A Vet</button>
-            <button className='btn btn-error mb-5'>Add Pet</button>
+    <div className='min-h-screen'>
+      <div className='hero'>
+        <div className='flex min-h-screen flex-col justify-around'>
+          <h1 className='mb-5 text-center text-5xl font-bold text-[#ca9973]'>Welcome!</h1>
+          <div className='flex flex-col'>
+            <Link className='mb-10'>
+              <button className='btn btn-success btn-wide'>Pet Diagnosis</button>
+            </Link>
+            <Link className='mb-10'>
+              <button className='btn btn-info btn-wide'>Find A Vet</button>
+            </Link>
+            <Link className='mb-10' to='/add-pet'>
+              <button className='btn btn-error btn-wide'>Add Pet</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,28 +1,22 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
-import './App.css';
-import Blank from './pages/blank';
-import Home from './pages/Home'
+import Home from './pages/Home';
+import PetType from './pages/AddPet';
+import AddPet from './pages/AddPet';
 
 function App() {
-
   let element = useRoutes([
     {
-      path: "/",
-      element:<Home/>
+      path: '/',
+      element: <Home />,
     },
     {
-      path: "/Blank",
-      element:<Blank/>
+      path: '/add-pet',
+      element: <AddPet />,
     },
-    
   ]);
 
-  return (
-    <>
-      {element}
-    </>
-  )
+  return <>{element}</>;
 }
 
-export default App
+export default App;
