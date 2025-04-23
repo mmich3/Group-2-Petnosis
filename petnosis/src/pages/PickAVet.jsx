@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar';
 
 const PickAVet = () => {
   return (
@@ -12,7 +12,7 @@ const PickAVet = () => {
         <div className='hero'>
           <div className='hero-content flex'>
             <Link className='mb-10' to='/Vet'>
-            <button className='btn btn-secondary'>Next</button>
+              <button className='btn btn-secondary'>Next</button>
             </Link>
           </div>
         </div>

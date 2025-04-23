@@ -46,8 +46,6 @@ const catBreeds = [
   { value: "turkish_angora", label: "Turkish Angora" },
   { value: "turkish_van", label: "Turkish Van" }
 ];
-
-  
   
 const AddCat = () => {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar';
 
 const Vet = () => {
   return (
@@ -12,12 +12,11 @@ const Vet = () => {
         <div className='hero'>
           <div className='hero-content flex'>
             <Link className='mb-10'>
-            <button className='btn btn-secondary'>null</button>
+              <button className='btn btn-secondary'>null</button>
             </Link>
           </div>
         </div>
       </div>
-      <Navbar />
     </div>
   );
 };

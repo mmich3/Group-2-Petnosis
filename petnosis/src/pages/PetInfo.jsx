@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar';
 
 const PetInfo = () => {
   return (
@@ -12,7 +12,7 @@ const PetInfo = () => {
         <div className='hero'>
           <div className='hero-content flex'>
             <Link className='mb-10' to='/'>
-            <button className='btn btn-secondary'>Save</button>
+              <button className='btn btn-secondary'>Save</button>
             </Link>
           </div>
         </div>

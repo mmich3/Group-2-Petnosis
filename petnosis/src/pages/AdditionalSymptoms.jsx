@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar';
 
 const AdditionalSymptoms = () => {
   return (
@@ -12,7 +12,7 @@ const AdditionalSymptoms = () => {
         <div className='hero'>
           <div className='hero-content flex'>
             <Link className='mb-10' to='/Results'>
-            <button className='btn btn-accent'>Get Diagnosis</button>
+              <button className='btn btn-accent'>Get Diagnosis</button>
             </Link>
           </div>
         </div>

@@ -6,21 +6,22 @@ import AddPet from './pages/AddPet';
 import SelectPet from './pages/SelectPet';
 import PetSymptoms from './pages/PetSymptoms';
 import PetHistory from './pages/PetHistory';
-import AdditionalSymptoms from './pages/AdditionalSymptoms'
-import Results from './pages/Results'
-import Location from './pages/Location'
+import AdditionalSymptoms from './pages/AdditionalSymptoms';
+import Results from './pages/Results';
+import Location from './pages/Location';
 import PickAVet from './pages/PickAVet';
-import Vet from './pages/Vet'
-import PetInfo from './pages/PetInfo'
+import Vet from './pages/Vet';
+import PetInfo from './pages/PetInfo';
+import Navbar from './components/Navbar';
 
 function App() {
   let element = useRoutes([
     {
       path: '/',
-      element: <Home />,
+      element: <Home isNavBarVisible={false} />,
     },
     {
-      path: '/add-pet',
+      path: '/AddPet',
       element: <AddPet />,
     },
     {
