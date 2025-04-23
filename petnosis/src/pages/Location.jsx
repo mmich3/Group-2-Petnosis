@@ -10,8 +10,8 @@ const Location = () => {
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Location</p>
         </div>
         <div className='hero'>
-          <div className='hero-content flex'>
-            <Link className='mb-10' to='/PickAVet'>
+          <div className='hero-content mt-10'>
+            <Link to='/PickAVet'>
               <button className='btn btn-secondary'>Next</button>
             </Link>
           </div>
