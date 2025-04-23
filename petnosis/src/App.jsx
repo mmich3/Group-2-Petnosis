@@ -12,6 +12,8 @@ import Location from './pages/Location'
 import PickAVet from './pages/PickAVet';
 import Vet from './pages/Vet'
 import PetInfo from './pages/PetInfo'
+import AddDog from './pages/AddDog'
+import AddCat from './pages/AddCat'
 
 function App() {
   let element = useRoutes([
@@ -22,6 +24,14 @@ function App() {
     {
       path: '/add-pet',
       element: <AddPet />,
+    },
+    {
+      path: '/add-cat',
+      element: <AddDog />,
+    },
+    {
+      path: '/add-dog',
+      element: <AddCat />,
     },
     {
       path: '/SelectPet',
