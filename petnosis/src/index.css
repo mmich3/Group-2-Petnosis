@@ -4,3 +4,56 @@
 :root{
   background-color: #fff6ed;
 }
+
+.my-datepicker {
+  @apply 
+  bg-white 
+  border 
+  border-gray-300 
+  rounded-lg 
+  shadow-md;
+  
+}
+
+/*calander head*/
+.my-datepicker .react-datepicker__header {
+  @apply 
+  bg-blue-200 
+  text-blue-900 
+  font-bold;
+  
+}
+
+.my-datepicker .react-datepicker__month-select,
+.my-datepicker .react-datepicker__year-select {
+  @apply 
+  mt-4
+  mb-2
+  text-blue-900 
+  bg-gray-100 
+  border-gray-400
+  rounded-lg; 
+}
+
+/* Day cells */
+.my-datepicker .react-datepicker__day {
+  @apply 
+  text-gray-700 
+  hover:bg-blue-200;
+  
+}
+
+/* Selected day */
+.my-datepicker .react-datepicker__day--selected {
+  @apply 
+  bg-blue-500 
+  text-white;
+}
+
+/* Today */
+.my-datepicker .react-datepicker__day--today {
+  @apply 
+  border
+  border-blue-400;
+}
+
