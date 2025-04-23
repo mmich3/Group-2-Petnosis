@@ -10,9 +10,10 @@ import AdditionalSymptoms from './pages/AdditionalSymptoms';
 import Results from './pages/Results';
 import Location from './pages/Location';
 import PickAVet from './pages/PickAVet';
+import AddDog from './pages/AddDog';
+import AddCat from './pages/AddCat';
 import Vet from './pages/Vet';
 import PetInfo from './pages/PetInfo';
-import Navbar from './components/Navbar';
 
 function App() {
   let element = useRoutes([
@@ -23,6 +24,14 @@ function App() {
     {
       path: '/AddPet',
       element: <AddPet />,
+    },
+    {
+      path: '/add-cat',
+      element: <AddDog />,
+    },
+    {
+      path: '/add-dog',
+      element: <AddCat />,
     },
     {
       path: '/SelectPet',
