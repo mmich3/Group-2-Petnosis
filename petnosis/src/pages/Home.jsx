@@ -8,10 +8,10 @@ function Home() {
         <div className='flex min-h-screen flex-col justify-around'>
           <h1 className='mb-5 text-center text-5xl font-bold text-[#ca9973]'>Welcome!</h1>
           <div className='flex flex-col'>
-            <Link className='mb-10'>
+            <Link className='mb-10' to='/SelectPet'>
               <button className='btn btn-success btn-wide'>Pet Diagnosis</button>
             </Link>
-            <Link className='mb-10'>
+            <Link className='mb-10' to='/Location'>
               <button className='btn btn-info btn-wide'>Find A Vet</button>
             </Link>
             <Link className='mb-10' to='/add-pet'>
