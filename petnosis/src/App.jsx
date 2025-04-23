@@ -19,18 +19,18 @@ function App() {
   let element = useRoutes([
     {
       path: '/',
-      element: <Home isNavBarVisible={false} />,
+      element: <Home />,
     },
     {
       path: '/AddPet',
       element: <AddPet />,
     },
     {
-      path: '/add-cat',
+      path: '/AddCat',
       element: <AddDog />,
     },
     {
-      path: '/add-dog',
+      path: '/AddDog',
       element: <AddCat />,
     },
     {

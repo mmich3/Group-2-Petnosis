@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className='absolute bottom-0 z-10 flex h-[-5] w-full justify-between bg-[#8fe3ff] shadow-md'>
-      <Link className='btn btn-lg btn-info flex-1 text-white m-0.5' to='#'>
+      <Link className='btn btn-lg btn-info m-0.5 flex-1 text-white' to='/PetSymptoms'>
         <FaPlus />
         Diagnosis
       </Link>
-      <Link className='btn btn-lg btn-info flex-1 text-white m-0.5' to='#'>
+      <Link className='btn btn-lg btn-info m-0.5 flex-1 text-white' to='/Vet'>
         <FaPaw />
         Vet
       </Link>
-      <Link className='btn btn-lg btn-info flex-1 text-white m-0.5' to='#'>
+      <Link className='btn btn-lg btn-info m-0.5 flex-1 text-white' to='/AddPet'>
         <FaDog />
         Add Pet
       </Link>

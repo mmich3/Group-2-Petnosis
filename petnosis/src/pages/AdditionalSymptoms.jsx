@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 const AdditionalSymptoms = () => {
   return (
     <div className='min-h-screen'>
-      <div className='flex min-h-screen flex-col justify-around'>
+      <div className='flex min-h-screen flex-col justify-center'>
         <div className='hero-content'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Additional Info</p>
         </div>
