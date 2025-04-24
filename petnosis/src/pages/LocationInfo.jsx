@@ -6,48 +6,46 @@ import Select from 'react-select';
 const LocationInfo = () => {
   return (
     <div className='min-h-screen'>
+
       <div className='flex min-h-screen flex-col items-center justify-center'>
+
         <div className='hero-content'>
         <div className='flex items-center justify-center gap-8'>
           <div>
-            <label className='mb-2 block w-[200px] text-lg font-semibold text-gray-700'>
+            <label className='mb-2 block w-[200px] text-lg font-semibold '>
               Street Address:
             </label>
             <input
               type='text'
-              className='input input-bordered w-full max-w-xs'
-              value={name}
+              className='input input-bordered w-full max-w-xs text-white'
               placeholder='Ex: John'
 
             />
-            <label className='mb-2 block w-[200px] text-lg font-semibold text-gray-700'>
+            <label className='mb-2 block w-[200px] text-lg font-semibold '>
               City:
             </label>
             <input
               type='text'
               className='input input-bordered w-full max-w-xs'
-              value={name}
               placeholder='Ex: John'
 
             />
-            <label className='mb-2 block w-[200px] text-lg font-semibold text-gray-700'>
+            <label className='mb-2 block w-[200px] text-lg font-semibold '>
               State:
             </label>
             <input
               type='text'
               className='input input-bordered w-full max-w-xs'
-              value={name}
               placeholder='Ex: John'
 
             />
 
-<label className='mb-2 block w-[200px] text-lg font-semibold text-gray-700'>
+<label className='mb-2 block w-[200px] text-lg font-semibold '>
               ZipCode:
             </label>
             <input
               type='text'
               className='input input-bordered w-full max-w-xs'
-              value={name}
               placeholder='Ex: John'
 
             />
