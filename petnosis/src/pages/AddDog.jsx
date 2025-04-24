@@ -168,23 +168,72 @@ const AddDog = () => {
     const [bday, setBday] = useState(null);
     const [breed, setBreed] = useState('');
     const [size, setSize] = useState('');
-    const [weight, setWeight] = useState('');
+    const [weight, setWeight] = useState(null);
+    const [isNameFilled, setNameFilled] = useState(false);
+    const [isBdayFilled, setBdayFilled] = useState(false);
+    const [isBreedFilled, setBreedFilled] = useState(false);
+    const [isSizeFilled, setSizeFilled] = useState(false);
+    const [isWeightFilled, setWeightFilled] = useState(false);
+    const [handleClicked, setHandleClicked] = useState(false);
 
     const handle = () => {
 
-        const dogData = JSON.parse(localStorage.getItem('dogs')) || [];
+        // setHandleClicked(true);
 
+        // if (!name) {
+        //     setNameFilled(false);
+        //     return;
+        // } else {
+        //     setNameFilled(true);
+        // }
+
+        // if (!bday) {
+        //     setBdayFilled(false);
+        //     return;
+        // } else {
+        //     setBdayFilled(true);
+        // }
+
+        // if (!breed) {
+        //     setBreedFilled(false);
+        //     return;
+        // } else {
+        //     setBreedFilled(true);
+        // }
+
+        // if (!size) {
+        //     setSizeFilled(false);
+        //     return;
+        // } else {
+        //     setSizeFilled(true);
+        // }
+
+        // if (!weight) {
+        //     setWeightFilled(false);
+        //     return;
+        // } else {
+        //     setWeightFilled(true);
+        // }
+
+        const dogData = JSON.parse(localStorage.getItem('dogs')) || [];
+      
         const dog = {
-            name,
-            birthday: bday ? bday.toISOString() : '',
-            breed,
-            size,
-            dogWeight: weight ? weight.toISOString() : '',
+          name,
+          birthday: bday ? bday.toISOString() : '',
+          breed: breed?.value || '',
+          size,
+          dogWeight: weight || '',
         };
 
         dogData.push(dog);
         localStorage.setItem('dogs', JSON.stringify(dogData));
-    }
+
+        // setName('');
+        // setBday(null);
+        // setBreed(null);
+        // setSize('');
+        // setWeight('');
+      };
 
   return (
     <div className='min-h-screen'>
@@ -196,18 +245,31 @@ const AddDog = () => {
 
         <div className="flex justify-center items-center gap-8 ">
             <div>
-                <label className="block w-[200px] text-lg font-semibold mb-2 text-gray-700 ">Name:</label>
+                <div className='flex flex-row'>
+                    <label className="text-lg font-semibold mb-2 text-red-500 ml-4">*&nbsp;</label>
+                    <label className="block w-[110px] text-lg font-semibold mb-2 text-gray-700 ">Name:</label>
+                </div>
                 <input
                     type="text"
-                    className="input input-bordered w-full max-w-xs"
+                    className="input input-bordered w-40 ml-4"
                     value={name}
                     placeholder='Ex: John'
                     onChange={(e) => setName(e.target.value)}
                 />
+
+                {!isNameFilled && handleClicked && (
+                    <p className="text-red-500 text-sm ml-4">
+                    Please enter a name.
+                    </p>
+                )}
+
             </div>
 
             <div>
-                <label className="block w-[200px] text-lg font-semibold mb-2 text-gray-700">Birth Date:</label>
+                <div className='flex flex-row'>
+                    <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
+                    <label className="block w-[110px] text-lg font-semibold mb-2 text-gray-700">Birth Date:</label>
+                </div>
                 <DatePicker
                     popperClassName="my-datepicker"
                     selected={bday}
@@ -217,8 +279,14 @@ const AddDog = () => {
                     showMonthDropdown
                     showYearDropdown
                     dropdownMode="select"
-                    className=" input input-bordered w-[200px]"
-                />            
+                    className="input input-bordered w-40 mr-4"
+                />
+
+            {!isBdayFilled && handleClicked && (
+                <p className="text-red-500 text-sm">
+                Please Enter a Birth Date
+                </p>
+            )}            
             
           </div>
             
@@ -226,44 +294,72 @@ const AddDog = () => {
 
         <div className="flex justify-center items-center gap-8">
             <div>
-                <label className=" block w-[200px] text-lg font-semibold mb-2 text-gray-700">Breed:</label>
+                <div className='flex flex-row'>
+                    <label className="text-lg font-semibold mb-2 text-red-500 ml-4">*&nbsp;</label>
+                    <label className=" block w-[110px] text-lg font-semibold mb-2 text-gray-700">Breed:</label>
+                </div>
                 <Select
                     options={dogBreeds}
                     value={dogBreeds.find((breedObj) => breedObj.value === breed)}
                     onChange={(e) => setBreed(e.value)}
                     placeholder="Select"
-                    className="max-w-xs min-w-[200px]"
+                    className="input input-bordered w-40 ml-4"
                 />
+
+                {!isBreedFilled && handleClicked && (
+                    <p className="text-red-500 text-sm ml-4">
+                    Please Enter a Breed
+                    </p>
+                )}   
             </div>
 
             <div>
-                <label className="block text-lg font-semibold mb-2 text-gray-700">Size:</label>
+                <div className='flex flex-row'>
+                    <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
+                    <label className="block text-lg font-semibold mb-2 text-gray-700">Size:</label>
+                </div>
+                
                 <select
                     value={size}
                     onChange={(e) => setSize(e.target.value)}
-                    className=" select select-bordered w-[200px] mr-[0px]"
+                    className="input input-bordered w-40 mr-4"
                 >
                     <option value="">Select</option>
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
                 </select>
+
+                {!isSizeFilled && handleClicked && (
+                    <p className="text-red-500 text-sm">
+                    Please Enter a Dog Size
+                    </p>
+                )}   
             </div>
             
         </div>
 
         <div className="flex justify-center items-center gap-8 mb-4">
             <div>
-                <label className="block w-[150px] text-lg font-semibold mb-2 text-gray-700">Weight (lbs):</label>
+                <div className='flex flex-row'>
+                    <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
+                    <label className="block w-[110px] text-lg font-semibold mb-2 text-gray-700">Weight (lbs):</label>
+                </div>
+               
                 <input 
                     type="number" 
                     placeholder="Enter..." 
                     value={weight} 
                     min={0}
                     onChange={(e) => setWeight(e.targetValue)}
-                    className='input input-bordered w-[200px]' 
+                    className="input input-bordered w-40"
                     
                 />
+                {/* {!isWeightFilled && handleClicked &&(
+                    <p className="text-red-500 text-sm">
+                    Please Enter a Weight
+                    </p>
+                )}  */}
 
             </div>
 

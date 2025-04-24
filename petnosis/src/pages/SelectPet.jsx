@@ -1,24 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar'
+import Navbar from './Navbar';
 
 const SelectPet = () => {
+  const [pets, setPets] = useState([]);
+
+  useEffect(() => {
+    const dogData = localStorage.getItem('dogs');
+    const catData = localStorage.getItem('cats');
+
+    const dogs = dogData ? JSON.parse(dogData) : [];
+    const cats = catData ? JSON.parse(catData) : [];
+
+    setPets([...dogs, ...cats]);
+  }, []);
+
   return (
-    <div className='min-h-screen'>
-      <div className='flex min-h-screen flex-col justify-around'>
+    <div className='min-h-screen '>
+      <div className='mt-30 flex min-h-screen flex-col justify-around items-center '>
         <div className='hero-content'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Select Pet</p>
         </div>
-        <div className='hero'>
-          <div className='hero-content flex'>
-            <Link className='mb-10' to='/PetOption'>
-            <button className='btn btn-accent'>Rocky</button>
-            </Link>
-            <Link className='mb-10' to='/PetOption'>
-            <button className='btn btn-secondary'>Max</button>
-            </Link>
+        
+          <div className ='mb-150 flex flex-col items-center space-y-4'>
+
+          
+
+          {pets.length === 0 ? (
+              <p className='text-xl'>No pets found. Add a pet to start a diagnosis! </p>
+              
+            ) : (
+              
+              pets.map((pet, index) => (
+                <Link key={index} to='/PetOption'>
+                  
+                  <button className='btn btn-secondary'>{pet.name}</button>
+                  
+                </Link>
+              ))
+            )}
+
           </div>
-        </div>
+        
       </div>  
       <Navbar />
     </div>

@@ -27,11 +27,11 @@ function App() {
     },
     {
       path: '/add-cat',
-      element: <AddDog />,
+      element: <AddCat />,
     },
     {
       path: '/add-dog',
-      element: <AddCat />,
+      element: <AddDog />,
     },
     {
       path: '/SelectPet',

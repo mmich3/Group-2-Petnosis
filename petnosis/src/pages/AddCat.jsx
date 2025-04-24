@@ -60,6 +60,7 @@ const AddCat = () => {
         const catData = JSON.parse(localStorage.getItem('cats')) || [];
 
         const cat = {
+            
             name,
             birthday: bday ? bday.toISOString() : '',
             breed,
@@ -69,6 +70,10 @@ const AddCat = () => {
 
         catData.push(cat);
         localStorage.setItem('cats', JSON.stringify(catData));
+    }
+
+    const handleAdd = () => {
+        
     }
 
   return (
@@ -82,7 +87,7 @@ const AddCat = () => {
         <div className="flex justify-center items-center gap-8 ">
             <div>
                 <label className="block w-[200px] text-lg font-semibold mb-2 text-gray-700 ">Name:</label>
-                <input
+                <input required
                     type="text"
                     className="input input-bordered w-full max-w-xs"
                     value={name}
@@ -93,7 +98,7 @@ const AddCat = () => {
 
             <div>
                 <label className="block w-[200px] text-lg font-semibold mb-2 text-gray-700">Birth Date:</label>
-                <DatePicker
+                <DatePicker required
                     popperClassName="my-datepicker"
                     selected={bday}
                     onChange={(e) => setBday(e)}
@@ -112,7 +117,7 @@ const AddCat = () => {
         <div className="flex justify-center items-center gap-8">
             <div>
                 <label className=" block w-[200px] text-lg font-semibold mb-2 text-gray-700">Breed:</label>
-                <Select
+                <Select required
                     options={catBreeds}
                     value={catBreeds.find((breedObj) => breedObj.value === breed)}
                     onChange={(e) => setBreed(e.value)}
@@ -123,7 +128,7 @@ const AddCat = () => {
 
             <div>
                 <label className="block text-lg font-semibold mb-2 text-gray-700">Size:</label>
-                <select
+                <select required
                     value={size}
                     onChange={(e) => setSize(e.target.value)}
                     className=" select select-bordered w-[200px] mr-[0px]"
@@ -140,7 +145,7 @@ const AddCat = () => {
         <div className="flex justify-center items-center gap-8 mb-4">
             <div>
                 <label className="block w-[150px] text-lg font-semibold mb-2 text-gray-700">Weight (lbs):</label>
-                <input 
+                <input required
                     type="number" 
                     placeholder="Enter..." 
                     value={weight} 
