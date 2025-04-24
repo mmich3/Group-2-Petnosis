@@ -58,7 +58,7 @@ function App() {
       element: <Results />,
     },
     {
-      path: '/LocationInfo',
+      path: '/Location',
       element: <LocationInfo />,
     },
     {

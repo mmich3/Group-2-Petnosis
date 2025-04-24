@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import BackButton from '../components/BackButton';
 
-const Vet = () => {
+const Location = () => {
   return (
     <div className='min-h-screen'>
-      <BackButton />
       <div className='flex min-h-screen flex-col items-center justify-center'>
-        <div className='hero-content mb-5 text-center'>
-          <p className='text-5xl font-bold text-[#ca9973]'>Linda's Vet</p>
+        <div className='hero-content'>
+          <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Location</p>
         </div>
         <div className='hero'>
           <div className='hero-content mt-10'>
-            <Link>
-              <button className='btn btn-secondary'>null</button>
+            <Link to='/PickAVet'>
+              <button className='btn btn-secondary'>Next</button>
             </Link>
           </div>
         </div>
@@ -24,4 +22,4 @@ const Vet = () => {
   );
 };
 
-export default Vet;
+export default Location;

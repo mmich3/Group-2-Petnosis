@@ -11,14 +11,12 @@ function Home() {
             <Link className='mb-10' to='/SelectPet'>
               <button className='btn btn-success btn-wide'>Pet Diagnosis</button>
             </Link>
-
             <Link className='mb-10' to='/Location'>
               <button className='btn btn-info btn-wide'>Find A Vet</button>
             </Link>
             <Link className='mb-10' to='/AddPet'>
               <button className='btn btn-error btn-wide'>Add Pet</button>
             </Link>
-            
           </div>
         </div>
       </div>
