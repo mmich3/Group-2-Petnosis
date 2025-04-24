@@ -6,12 +6,13 @@ import AddPet from './pages/AddPet';
 import SelectPet from './pages/SelectPet';
 import PetSymptoms from './pages/PetSymptoms';
 import PetHistory from './pages/PetHistory';
-import AdditionalSymptoms from './pages/AdditionalSymptoms'
-import Results from './pages/Results'
-import Location from './pages/LocationMap'
-import PickAVet from './pages/PickAVet';
-import Vet from './pages/Vet'
-import PetInfo from './pages/PetInfo'
+import AdditionalSymptoms from './pages/AdditionalSymptoms';
+import Results from './pages/Results';
+import Location from './pages/Location';
+import AddDog from './pages/AddDog';
+import AddCat from './pages/AddCat';
+import Vet from './pages/Vet';
+import PetInfo from './pages/PetInfo';
 
 function App() {
   let element = useRoutes([
@@ -22,6 +23,14 @@ function App() {
     {
       path: '/AddPet',
       element: <AddPet />,
+    },
+    {
+      path: '/AddCat',
+      element: <AddDog />,
+    },
+    {
+      path: '/AddDog',
+      element: <AddCat />,
     },
     {
       path: '/SelectPet',
@@ -50,10 +59,6 @@ function App() {
     {
       path: '/Location',
       element: <Location />,
-    },
-    {
-      path: '/PickAVet',
-      element: <PickAVet />,
     },
     {
       path: '/Vet',
