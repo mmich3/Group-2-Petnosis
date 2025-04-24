@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import { FaChevronLeft } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
+import BackButton from '../components/BackButton';
 
 const SelectPet = () => {
   const [pets, setPets] = useState([]);
@@ -16,33 +18,23 @@ const SelectPet = () => {
   }, []);
 
   return (
-    <div className='min-h-screen '>
-      <div className='mt-30 flex min-h-screen flex-col justify-around items-center '>
-        <div className='hero-content'>
-          <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Select Pet</p>
+    <div className='min-h-screen'>
+      <BackButton />
+      <div className='flex min-h-screen flex-col items-center justify-center'>
+        <div className='hero-content mb-5 text-center'>
+          <p className='text-5xl font-bold text-[#ca9973]'>Select Pet</p>
         </div>
-        
-          <div className ='mb-150 flex flex-col items-center space-y-4'>
-
-          
-
-          {pets.length === 0 ? (
-              <p className='text-xl'>No pets found. Add a pet to start a diagnosis! </p>
-              
-            ) : (
-              
-              pets.map((pet, index) => (
-                <Link key={index} to='/PetOption'>
-                  
-                  <button className='btn btn-secondary'>{pet.name}</button>
-                  
-                </Link>
-              ))
-            )}
-
+        <div className='hero'>
+          <div className='hero-content mt-10'>
+            <Link to='/PetOption'>
+              <button className='btn btn-accent'>Rocky</button>
+            </Link>
+            <Link to='/PetOption'>
+              <button className='btn btn-secondary'>Max</button>
+            </Link>
           </div>
-        
-      </div>  
+        </div>
+      </div>
       <Navbar />
     </div>
   );
