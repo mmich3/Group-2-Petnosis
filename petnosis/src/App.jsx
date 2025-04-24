@@ -8,7 +8,7 @@ import PetSymptoms from './pages/PetSymptoms';
 import PetHistory from './pages/PetHistory';
 import AdditionalSymptoms from './pages/AdditionalSymptoms'
 import Results from './pages/Results'
-import Location from './pages/Location'
+import Location from './pages/LocationMap'
 import PickAVet from './pages/PickAVet';
 import Vet from './pages/Vet'
 import PetInfo from './pages/PetInfo'
@@ -20,7 +20,7 @@ function App() {
       element: <Home />,
     },
     {
-      path: '/add-pet',
+      path: '/AddPet',
       element: <AddPet />,
     },
     {

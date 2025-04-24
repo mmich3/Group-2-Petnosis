@@ -56,4 +56,8 @@
   border
   border-blue-400;
 }
+.leaflet-container {
+  height: 100vh;
+  width: 100wh;
+}
 

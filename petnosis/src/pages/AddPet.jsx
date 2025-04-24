@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 const AddPet = () => {
   return (
@@ -8,9 +9,9 @@ const AddPet = () => {
           <p className='mt-35 text-5xl font-bold text-[#ca9973]'>What Type of Pet?</p>
         </div>
         <div className='hero'>
-          <div className='hero-content flex'>
-            <button className='btn btn-accent'>Cat</button>
-            <button className='btn btn-secondary'>Dog</button>
+          <div className='hero-content flex-col'>
+            <button className='btn btn-xl  btn-accent'>Cat</button>
+            <button className='btn btn-xl btn-secondary'>Dog</button>
           </div>
 
         </div>
