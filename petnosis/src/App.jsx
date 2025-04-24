@@ -8,7 +8,8 @@ import PetSymptoms from './pages/PetSymptoms';
 import PetHistory from './pages/PetHistory';
 import AdditionalSymptoms from './pages/AdditionalSymptoms';
 import Results from './pages/Results';
-import Location from './pages/Location';
+import LocationInfo from './pages/LocationInfo';
+import LocationMap from './pages/LocationMap';
 import AddDog from './pages/AddDog';
 import AddCat from './pages/AddCat';
 import Vet from './pages/Vet';
@@ -58,7 +59,7 @@ function App() {
     },
     {
       path: '/Location',
-      element: <Location />,
+      element: <LocationInfo />,
     },
     {
       path: '/Vet',

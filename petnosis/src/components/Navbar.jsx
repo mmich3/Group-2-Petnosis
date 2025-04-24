@@ -9,7 +9,7 @@ const Navbar = () => {
         <FaPlus />
         Diagnosis
       </Link>
-      <Link className='btn btn-lg btn-info m-0.5 flex-1 text-white' to='/Vet'>
+      <Link className='btn btn-lg btn-info m-0.5 flex-1 text-white' to='/Location'>
         <FaPaw />
         Vet
       </Link>
