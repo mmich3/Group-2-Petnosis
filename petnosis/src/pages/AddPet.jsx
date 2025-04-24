@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import BackButton from '../components/BackButton';
+import { Link } from 'react-router-dom';
+
 
 const AddPet = () => {
   return (
@@ -12,8 +14,13 @@ const AddPet = () => {
         </div>
         <div className='hero'>
           <div className='hero-content flex-col'>
-            <button className='btn btn-xl btn-accent'>Cat</button>
-            <button className='btn btn-xl btn-secondary'>Dog</button>
+            <Link to='/AddCat'>
+              <button className='btn btn-xl btn-accent'>Cat</button>
+            </Link>
+            
+            <Link to='/AddDog'>
+              <button className='btn btn-xl btn-secondary'>Dog</button>
+            </Link>
           </div>
         </div>
         <Navbar />
