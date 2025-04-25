@@ -1,68 +1,85 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Select from 'react-select';
+import { Button } from "@material-tailwind/react";
+import Form from '../components/Form';
+import Map from './Map';
 
 const LocationInfo = () => {
   return (
-    <div className='min-h-screen'>
+    <div className="flex flex-col min-h-screen">
+      {/* Main content area - grows to fill space */}
+      <div className="flex-grow flex items-center justify-center px-4">
+        <div className="flex flex-row items-start gap-12">
+          {/* Form Card */}
+          <div className="card w-full max-w-md bg-amber-100  shadow-xl">
+            <form
+              className="card-body"
+              onSubmit={(e) => {
+                e.preventDefault();
+                window.location.href = '/PickAVet';
+              }}
+            >
+              <h2 className="card-title text-center text-2xl mb-4">Enter Your Address</h2>
 
-      <div className='flex min-h-screen flex-col items-center justify-center'>
+              <label className="label">
+                <span className="label-text font-semibold text-black">Street Address</span>
+              </label>
+              <input
+                type="text"
+                placeholder="1234 Main St"
+                className="input input-bordered bg-white w-full"
+                required
+              />
 
-        <div className='hero-content'>
-        <div className='flex items-center justify-center gap-8'>
-          <div>
-            <label className='mb-2 block w-[200px] text-lg font-semibold '>
-              Street Address:
-            </label>
-            <input
-              type='text'
-              className='input input-bordered w-full max-w-xs text-white'
-              placeholder='Ex: John'
+              <label className="label">
+                <span className="label-text font-semibold text-black">City</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Chicago"
+                className="input input-bordered bg-white w-full"
+                required
+              />
 
-            />
-            <label className='mb-2 block w-[200px] text-lg font-semibold '>
-              City:
-            </label>
-            <input
-              type='text'
-              className='input input-bordered w-full max-w-xs'
-              placeholder='Ex: John'
+              <label className="label">
+                <span className="label-text font-semibold text-black">State</span>
+              </label>
+              <input
+                type="text"
+                placeholder="IL"
+                className="input input-bordered bg-white w-full"
+                required
+              />
 
-            />
-            <label className='mb-2 block w-[200px] text-lg font-semibold '>
-              State:
-            </label>
-            <input
-              type='text'
-              className='input input-bordered w-full max-w-xs'
-              placeholder='Ex: John'
+              <label className="label">
+                <span className="label-text font-semibold text-black">Zip Code</span>
+              </label>
+              <input
+                type="text"
+                placeholder="60607"
+                className="input input-bordered bg-white w-full"
+                required
+              />
 
-            />
-
-<label className='mb-2 block w-[200px] text-lg font-semibold '>
-              ZipCode:
-            </label>
-            <input
-              type='text'
-              className='input input-bordered w-full max-w-xs'
-              placeholder='Ex: John'
-
-            />
+              <div className="mt-6">
+                <button type="submit" className="btn btn-primary w-full">Next</button>
+              </div>
+            </form>
           </div>
 
-          
-        </div>
-        </div>
-        <div>
-          <div className='hero-content mt-10'>
-            <Link to='/PickAVet'>
-              <button className='btn btn-secondary'>Next</button>
-            </Link>
-          </div>
+            <div className='card p-4 bg-success'>
+              <Map height="400px" width="50vw"/>
+            </div>
+            
+
         </div>
       </div>
-      <Navbar />
+
+      {/* Navbar fixed at the bottom */}
+      <div className="w-full">
+        <Navbar />
+      </div>
     </div>
   );
 };
