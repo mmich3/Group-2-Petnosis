@@ -54,16 +54,33 @@ export default function Map(props) {
           id="1"
           coordinates={[41.87777811992834, -87.64979928280339]}
           title="West Loop Vet"
-          body="Combining over a decade of experience..."
+          body="Combining over a decade of 
+          experience in primary care and  specialty/emergency veterinary hospitals, the best technological advancements, holistic 
+          integrative therapeutics, and a warm and caring staff, we've created a personalized veterinary experience that reflects 
+          what we have always wanted to have for our own beloved pets! "
+          address="815 W Randolph St, Chicago, IL 60607"
+          rating={4.5}
+          url="https://media.istockphoto.com/id/1171733307/photo/vet-with-dog-and-cat-puppy-and-kitten-at-doctor.jpg?s=612x612&w=0&k=20&c=bgRM6090SMgF2-AHWdOk0OHs-fVe-o2mwkbmsKNwn3w="
+        />
+
+        {/* <VetClinic
+          id="2"
+          coordinates={[41.87416420083566, -87.68227769174646]}
+          title="Medical District Veterinary Clinic at Illinois"
+          body="Medical District Veterinary Clinic is a full-service, family-oriented practice where your pet is a special member of 
+          the family! We cater to cats and dogs in Chicago, Illinois. As a Cat Friendly Practice® our feline patients have full access
+           to a cat-friendly space certified as GOLD status by the American Association of Feline Practitioners."
           url="https://media.istockphoto.com/id/1171733307/photo/vet-with-dog-and-cat-puppy-and-kitten-at-doctor.jpg?s=612x612&w=0&k=20&c=bgRM6090SMgF2-AHWdOk0OHs-fVe-o2mwkbmsKNwn3w="
         />
 
         <VetClinic
-          id="2"
-          coordinates={[41.87416420083566, -87.68227769174646]}
-          title="Medical District Veterinary Clinic at Illinois"
-          body="Combining over a decade of experience..."
-          url="https://media.istockphoto.com/id/1171733307/photo/vet-with-dog-and-cat-puppy-and-kitten-at-doctor.jpg?s=612x612&w=0&k=20&c=bgRM6090SMgF2-AHWdOk0OHs-fVe-o2mwkbmsKNwn3w="
+          id="3"
+          coordinates={[41.85843048270482, -87.6537132302468]}
+          title="Kindred Veterinary"
+          body="Combining over a decade of experience in primary care and  specialty/emergency veterinary hospitals, the best technological
+           advancements, holistic integrative therapeutics, and a warm and caring staff, we’ve created a personalized veterinary experience 
+           that reflects what we have always wanted to have for our own beloved pets!"
+          url="https://images.squarespace-cdn.com/content/v1/64f4d27631e24b45303c9070/1695960821956-WQYIYUSB7YUM84QCWAYH/IMG_7104%2B%25281%2529-min.jpg?format=750w"
         />
 
         <VetClinic
@@ -72,7 +89,7 @@ export default function Map(props) {
           title="Kindred Veterinary"
           body="Combining over a decade of experience..."
           url="https://images.squarespace-cdn.com/content/v1/64f4d27631e24b45303c9070/1695960821956-WQYIYUSB7YUM84QCWAYH/IMG_7104%2B%25281%2529-min.jpg?format=750w"
-        />
+        /> */}
       </MapContainer>
     </div>
   );
