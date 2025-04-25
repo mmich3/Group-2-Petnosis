@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
+import Navbar from '../components/Navbar';
+import dogIcon from '../images/dog422.jpg'
 
 const dogBreeds = [
   { value: 'affenpinscher', label: 'Affenpinscher' },
@@ -232,9 +234,21 @@ const AddDog = () => {
 
   return (
     <div className='min-h-screen'>
-      <div className='flex flex-col items-center space-y-4 py-35'>
+      <div className='flex flex-col items-center space-y-4 py-20'>
         <div className='flex items-center justify-center'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Enter Dog Info</p>
+        </div>
+
+        <div className='flex items-center justify-center gap-8'>
+          <img src= {dogIcon} alt="dog" className="rounded-full shadow-lg w-38 h-auto"/>
+      
+        </div>
+
+        <div className="text-blue-500 text-m font-bold">
+              Edit
+          </div>
+
+        <div className='flex items-center justify-center gap-8'>
         </div>
 
         <div className='flex items-center justify-center gap-8'>
@@ -247,7 +261,7 @@ const AddDog = () => {
               type='text'
               className='input input-bordered w-40 ml-4'
               value={name}
-              placeholder='Ex: John'
+              placeholder='Ex: Luna'
               onChange={(e) => setName(e.target.value)}
             />
 
@@ -278,7 +292,7 @@ const AddDog = () => {
             
             {!isBdayFilled && handleClicked && (
                 <p className="text-red-500 text-sm">
-                Please Enter a Birth Date
+                Please enter a birth date
                 </p>
             )} 
 
@@ -296,11 +310,11 @@ const AddDog = () => {
               value={dogBreeds.find((breedObj) => breedObj.value === breed)}
               onChange={(e) => setBreed(e.value)}
               placeholder='Select'
-              className="input input-bordered w-40 ml-4"
+              className="input-bordered  w-40 ml-4"
             />
             {!isBreedFilled && handleClicked && (
                     <p className="text-red-500 text-sm ml-4">
-                    Please Enter a Breed
+                    Please enter a breed
                     </p>
                 )} 
           </div>
@@ -323,13 +337,13 @@ const AddDog = () => {
 
             {!isSizeFilled && handleClicked && (
                 <p className="text-red-500 text-sm">
-                Please Enter a Dog Size
+                Please enter a dog size
                 </p>
             )}   
           </div>
         </div>
 
-        <div className='mb-4 flex items-center justify-center gap-8'>
+        <div className='mb-8 flex items-center justify-center gap-8'>
           <div>
           <div className='flex flex-row'>
                     <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
@@ -345,20 +359,22 @@ const AddDog = () => {
                 />
             {!isWeightFilled && handleClicked && (
                 <p className="text-red-500 text-sm">
-                Please Enter a Weight
+                Please enter a weight
                 </p>
             )} 
           </div>
         </div>
 
         <div>
-          <button onClick={handle} className='btn btn-success'>
+          <button onClick={handle} className='btn btn-success text-white'>
             Save
           </button>
         </div>
       </div>
+      <Navbar />
     </div>
   );
 };
 
 export default AddDog;
+

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
-import catIcon from './images/cat422.jpg'
+import Navbar from '../components/Navbar';
+import catIcon from '../images/cat422.jpg'
 
 const catBreeds = [
   { value: 'abysinnian', label: 'Abyssinian' },
@@ -49,6 +50,7 @@ const catBreeds = [
 ];
 
 const AddCat = () => {
+    const [type, setType] = useState('');
     const [name, setName] = useState('');
     const [bday, setBday] = useState(null);
     const [breed, setBreed] = useState('');
@@ -119,13 +121,21 @@ const AddCat = () => {
   
     return (
       <div className='min-h-screen'>
-        <div className='flex flex-col items-center space-y-4 py-35'>
+        <div className='flex flex-col items-center space-y-4 py-20'>
           <div className='flex items-center justify-center'>
             <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Enter Cat Info</p>
           </div>
 
           <div className='flex items-center justify-center gap-8'>
-            <img src= {catIcon} alt="cat" className="rounded-lg shadow-lg w-48 h-auto"/>
+            <img src= {catIcon} alt="cat" className="rounded-full shadow-lg w-38 h-auto"/>
+        
+          </div>
+
+          <div className="text-blue-500 text-m font-bold">
+                Edit
+            </div>
+
+          <div className='flex items-center justify-center gap-8'>
           </div>
   
           <div className='flex items-center justify-center gap-8'>
@@ -187,7 +197,7 @@ const AddCat = () => {
                 value={catBreeds.find((breedObj) => breedObj.value === breed)}
                 onChange={(e) => setBreed(e.value)}
                 placeholder='Select'
-                className="input input-bordered  w-40 ml-4"
+                className="input-bordered  w-40 ml-4"
               />
               {!isBreedFilled && handleClicked && (
                       <p className="text-red-500 text-sm ml-4">
@@ -220,7 +230,7 @@ const AddCat = () => {
             </div>
           </div>
   
-          <div className='mb-4 flex items-center justify-center gap-8'>
+          <div className='mb-8 flex items-center justify-center gap-8'>
             <div>
             <div className='flex flex-row'>
                       <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
@@ -243,11 +253,12 @@ const AddCat = () => {
           </div>
   
           <div>
-            <button onClick={handle} className='btn btn-success'>
+            <button onClick={handle} className='btn btn-success text-white'>
               Save
             </button>
           </div>
         </div>
+        <Navbar />
       </div>
     );
   };
