@@ -4,6 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
 import Navbar from '../components/Navbar';
 import catIcon from '../images/cat422.jpg'
+import BackButton from '../components/BackButton';
 
 const catBreeds = [
   { value: 'abysinnian', label: 'Abyssinian' },
@@ -121,6 +122,7 @@ const AddCat = () => {
   
     return (
       <div className='min-h-screen'>
+        <BackButton />
         <div className='flex flex-col items-center space-y-4 py-20'>
           <div className='flex items-center justify-center'>
             <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Enter Cat Info</p>

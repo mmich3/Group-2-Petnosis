@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import catIcon from '../images/cat422.jpg'
 import dogIcon from '../images/dog422.jpg'
+import BackButton from '../components/BackButton';
+import Search from '../components/Search';
+import Voice from '../components/Voice';
+
 
 const SelectPet = () => {
   const [pets, setPets] = useState([]);
@@ -18,14 +23,26 @@ const SelectPet = () => {
   }, []);
 
   return (
-    <div className='min-h-screen '>
-      <div className='flex flex-col items-center space-y-4 py-20'>
+    <div className='min-h-screen'>
+      <BackButton />
+      <div className='min-h-screen flex flex-col items-center py-20'>
         <div className='hero-content'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Select Pet</p>
         </div>
         
-          <div className ='mb-150 flex flex-col items-center space-y-4'>
+          <div className ='mb-150 flex flex-col items-center space-y-10'>
 
+          
+          <input
+                type='text'
+                className='pl-10 input input-bordered w-90 ml-4 rounded-full'
+                placeholder='Search for pet...'
+                onChange={(e) => setName(e.target.value)}
+            />
+              <Search />
+              <Voice />
+            
+            
           {pets.length === 0 ? (
               <p className='ml-13 mr-13 text-xl items-center'>No pets found. Add a pet to start a diagnosis! </p>
               

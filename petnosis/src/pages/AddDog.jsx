@@ -4,6 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
 import Navbar from '../components/Navbar';
 import dogIcon from '../images/dog422.jpg'
+import BackButton from '../components/BackButton';
+import HomeButton from '../components/HomeButton';
 
 const dogBreeds = [
   { value: 'affenpinscher', label: 'Affenpinscher' },
@@ -228,12 +230,11 @@ const AddDog = () => {
     dogData.push(dog);
     localStorage.setItem('dogs', JSON.stringify(dogData));
 
-    
-
   };
 
   return (
     <div className='min-h-screen'>
+        <BackButton />
       <div className='flex flex-col items-center space-y-4 py-20'>
         <div className='flex items-center justify-center'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Enter Dog Info</p>

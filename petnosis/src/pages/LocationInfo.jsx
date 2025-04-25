@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import { Button } from "@material-tailwind/react";
-import Form from '../components/Form';
+// import { Button } from "@material-tailwind/react";
+// import Form from '../components/Form';
 import Map from './Map';
 
 const LocationInfo = () => {
