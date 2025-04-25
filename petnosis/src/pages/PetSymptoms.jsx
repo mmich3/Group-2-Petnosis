@@ -8,7 +8,7 @@ import Voice from '../components/Voice';
 
 const PetSymptoms = () => {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen' style={{overflow: 'hidden'}}>
       <BackButton />
       <div className='flex min-h-screen flex-col items-center justify-center'>
         <div className='hero-content mb-5 text-center'>
@@ -20,10 +20,10 @@ const PetSymptoms = () => {
                 placeholder='Search symptoms...'
                 onChange={(e) => setName(e.target.value)}
             />
-        <div style={{marginRight: 320, position: 'relative', top: -40}}>
-            <Search />
-            <Voice />
-        </div>
+            <div style={{marginRight: 320, position: 'relative', top: -40}}>
+                <Search />
+                <Voice />
+            </div>
 
         <p style={{color: '#878787', padding: 10}}>Check all that apply</p>
         <div style={{display: 'flex', flexDirection: 'column', alignItems:'flex-start'}}>
