@@ -3,7 +3,22 @@
 
 :root {
   background-color: #fff6ed;
+  --background: white;
+  --foreground: black;
   width: full;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --background: white;
+    --foreground: black;
+  }
+}
+
+body{
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .my-datepicker {
