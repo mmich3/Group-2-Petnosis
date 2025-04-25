@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import dogIcon from '../images/dog422.jpg'
 import BackButton from '../components/BackButton';
 import HomeButton from '../components/HomeButton';
+import { CiHome } from 'react-icons/ci';
 
 const dogBreeds = [
   { value: 'affenpinscher', label: 'Affenpinscher' },
@@ -235,6 +236,9 @@ const AddDog = () => {
   return (
     <div className='min-h-screen'>
         <BackButton />
+        {/* <div className="flex justify-start"> */}
+            {/* <HomeButton /> */}
+        {/* </div> */}
       <div className='flex flex-col items-center space-y-4 py-20'>
         <div className='flex items-center justify-center'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Enter Dog Info</p>

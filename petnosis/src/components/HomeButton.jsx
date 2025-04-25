@@ -6,8 +6,8 @@ const HomeButton = () => {
 
   return (
     <button
-      className='btn btn-outline btn-circle fixed m-2 border-black text-black hover:text-white'
-      onClick={() => navigate("Home")}
+      className="btn btn-outline btn-circle border-black text-black hover:text-white ml-150 mt-2"
+      onClick={() => navigate("../pages/Home")}
     >
       <CiHome />
     </button>

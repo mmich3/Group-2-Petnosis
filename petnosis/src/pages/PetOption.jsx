@@ -6,7 +6,6 @@ import BackButton from '../components/BackButton';
 
 const PetOption = () => {
 
-
   return (
     <div className='min-h-screen'>
       <BackButton />
