@@ -2,26 +2,39 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import BackButton from '../components/BackButton';
+import { useParams } from 'react-router-dom';
 
-const Vet = () => {
-  return (
-    <div className='min-h-screen'>
-      <BackButton />
-      <div className='flex min-h-screen flex-col items-center justify-center'>
-        <div className='hero-content mb-5 text-center'>
-          <p className='text-5xl font-bold text-[#ca9973]'>Linda's Vet</p>
-        </div>
-        <div className='hero'>
-          <div className='hero-content mt-10'>
-            <Link>
-              <button className='btn btn-secondary'>null</button>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <Navbar />
-    </div>
-  );
+const vetData = {
+  "1": {
+    title: "West Loop Vet",
+    body: "...",
+    url: "...",
+  },
+  "2": {
+    title: "Medical District Veterinary Clinic at Illinois",
+    body: "...",
+    url: "...",
+  },
+  "3": {
+    title: "Kindred Veterinary",
+    body: "...",
+    url: "...",
+  },
 };
 
-export default Vet;
+export default function Vet() {
+  const { id } = useParams();
+  const vet = vetData[id];
+
+  if (!vet) return <div>Vet clinic not found</div>;
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <BackButton/>
+      <h1 style={{ color: "#ca9973" }}>{vet.title}</h1>
+      <img src={vet.url} alt={vet.title} style={{ width: "100%", maxWidth: "600px", margin: "20px 0" }} />
+      <p>{vet.body}</p>
+    </div>
+  );
+}
+

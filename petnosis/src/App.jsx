@@ -9,11 +9,11 @@ import PetHistory from './pages/PetHistory';
 import AdditionalSymptoms from './pages/AdditionalSymptoms';
 import Results from './pages/Results';
 import LocationInfo from './pages/LocationInfo';
-import LocationMap from './pages/LocationMap';
 import AddDog from './pages/AddDog';
 import AddCat from './pages/AddCat';
 import Vet from './pages/Vet';
 import PetInfo from './pages/PetInfo';
+import PickAVet from './pages/PickAVet';
 
 function App() {
   let element = useRoutes([
@@ -60,6 +60,14 @@ function App() {
     {
       path: '/Location',
       element: <LocationInfo />,
+    },
+    {
+      path: '/PickAVet',
+      element: <PickAVet />,
+    },
+    {
+      path: '/Vet/:id',
+      element: <Vet />,
     },
     {
       path: '/Vet',
