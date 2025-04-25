@@ -38,7 +38,7 @@ const PetSymptoms = () => {
                 <b style={{fontSize: 30, color: '#4B7A82', paddingLeft: 10, paddingTop: 3}}>Other</b>
             </div>
         </div>
-        <div className='hero'>
+        <div className='hero' style={{justifyContent: 'right'}}>
           <div className='hero-content mt-10'>
             <Link to='/AdditionalSymptoms'>
               <button className='btn btn-accent'>Next</button>
