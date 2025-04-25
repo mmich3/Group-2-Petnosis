@@ -230,6 +230,7 @@ const AddDog = () => {
 
   return (
     <div className='flex min-h-screen flex-col items-center justify-between'>
+      <BackButton />
       <span className='mt-5 flex items-center'>
         <p className='text-5xl font-bold text-[#ca9973]'>Enter Dog Info</p>
       </span>
