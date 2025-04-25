@@ -260,7 +260,7 @@ const AddDog = () => {
                 </div>
             <input
               type='text'
-              className='input input-bordered w-40 ml-4'
+              className='input bg-white w-40 ml-4'
               value={name}
               placeholder='Ex: Charlie'
               onChange={(e) => setName(e.target.value)}
@@ -288,7 +288,7 @@ const AddDog = () => {
               showMonthDropdown
               showYearDropdown
               dropdownMode='select'
-              className="input input-bordered w-40 mr-4"
+              className="input bg-white border-1 border-grey input-bordered w-40 mr-4"
             />
             
             {!isBdayFilled && handleClicked && (
@@ -311,7 +311,7 @@ const AddDog = () => {
               value={dogBreeds.find((breedObj) => breedObj.value === breed)}
               onChange={(e) => setBreed(e.value)}
               placeholder='Select'
-              className="input-bordered  w-40 ml-4"
+              className="input-bordered w-40 ml-4"
             />
             {!isBreedFilled && handleClicked && (
                     <p className="text-red-500 text-sm ml-4">
@@ -328,7 +328,7 @@ const AddDog = () => {
             <select
               value={size}
               onChange={(e) => setSize(e.target.value)}
-              className="input input-bordered w-40 mr-4"
+              className="input input-bordered bg-white w-40 mr-4"
             >
               <option value=''>Select</option>
               <option value='small'>Small</option>
@@ -356,7 +356,7 @@ const AddDog = () => {
                     value={weight}
                     min={0}
                     onChange={(e) => setWeight(e.target.value)}
-                    className="input input-bordered w-40"
+                    className="input input-bordered bg-white w-40"
                 />
             {!isWeightFilled && handleClicked && (
                 <p className="text-red-500 text-sm">
