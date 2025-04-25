@@ -261,7 +261,7 @@ const AddDog = () => {
               type='text'
               className='input input-bordered w-40 ml-4'
               value={name}
-              placeholder='Ex: Luna'
+              placeholder='Ex: Charlie'
               onChange={(e) => setName(e.target.value)}
             />
 

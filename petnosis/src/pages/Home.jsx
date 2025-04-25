@@ -9,13 +9,13 @@ function Home() {
           <h1 className='mb-5 text-center text-5xl font-bold text-[#ca9973]'>Welcome!</h1>
           <div className='flex flex-col'>
             <Link className='mb-10' to='/SelectPet'>
-              <button className='btn btn-success btn-wide'>Pet Diagnosis</button>
+              <button className='btn btn-success btn-wide text-white'>Pet Diagnosis</button>
             </Link>
             <Link className='mb-10' to='/Location'>
-              <button className='btn btn-info btn-wide'>Find A Vet</button>
+              <button className='btn btn-info btn-wide text-white'>Find A Vet</button>
             </Link>
             <Link className='mb-10' to='/AddPet'>
-              <button className='btn btn-error btn-wide'>Add Pet</button>
+              <button className='btn btn-error btn-wide text-white'>Add Pet</button>
             </Link>
           </div>
         </div>
