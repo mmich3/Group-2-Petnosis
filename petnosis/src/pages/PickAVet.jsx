@@ -6,17 +6,23 @@ import BackButton from '../components/BackButton';
 
 const PickAVet = () => {
   return (
-    <div className='relative min-h-screen'>
+    
+    <div className="relative min-h-screen bg-amber-100">
       <BackButton />
-      <div className='flex min-h-screen flex-col items-center justify-start pt-10'>
+      <div className="max-w-6xl mx-auto px-4 py-6">
         
-        <Map height="80vh" width="100%"/>
-        <div className='hero'>
-          <div className='hero-content mt-10'>
-            
+        <h1 className="text-2xl font-bold text-center text-amber-800 my-6">
+          Explore Nearby Vets
+        </h1>
+
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <Map height="80vh" width="100%"/>
+            </div>
           </div>
-        </div>
-      </div>
+
+
+        
+
       <Navbar />
     </div>
 

@@ -16,17 +16,7 @@ function VetClinic(props) {
     <>
       <Marker position={props.coordinates} icon={vetIcon}>
         <Popup >
-          {/* <div
-            className='pop-up-div'
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
-          >
-            <img className="w-full"src={props.url} alt={props.title} style={{ margin: '0 0 20px 0' }} />
-            <strong style={{ color: '#ca9973' }}>{props.title}</strong>
-            <strong style={{ color: '#ca9973' }}>{props.address}</strong>
-            <StarRating rating={props.rating} />
-            <p>{props.body}</p>
-          </div>
-          <Link to={`/Vet/${props.id}`}><button className='align-center'>More info</button></Link> */}
+          
           <div
             className='pop-up-div space-y-2'
             style={{
