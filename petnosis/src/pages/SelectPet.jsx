@@ -6,7 +6,6 @@ import catIcon from '../images/cat422.jpg';
 import dogIcon from '../images/dog422.jpg';
 import BackButton from '../components/BackButton';
 import Search from '../components/Search';
-import Voice from '../components/Voice';
 
 const SelectPet = () => {
   const [pets, setPets] = useState([]);
@@ -34,8 +33,8 @@ const SelectPet = () => {
           <p className='items-center text-xl'>No pets found. Add a pet to start a diagnosis! </p>
         ) : (
           pets.map((pet, index) => (
-            <Link key={index} to='/PetOption'>
-              <div className='items-center overflow-auto p-2 flex flex-col'>
+            <Link key={index} to='/PetOption' state={{ pet, pets }}>
+              <div className='flex flex-col items-center overflow-auto p-2'>
                 <img
                   src={pet.type === 'dog' ? dogIcon : catIcon}
                   alt={pet.type}

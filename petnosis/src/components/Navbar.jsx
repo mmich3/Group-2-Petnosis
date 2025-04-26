@@ -6,7 +6,7 @@ const Navbar = () => {
   
   return (
     <nav className='fixed bottom-0 left-0 w-full z-50 flex justify-between bg-[#8fe3ff] shadow-md'>
-      <Link className='btn btn-lg btn-success m-0.5 flex-1 text-white' to='/PetSymptoms'>
+      <Link className='btn btn-lg btn-success m-0.5 flex-1 text-white' to='/SelectPet'>
         <FaPlus />
         Diagnosis
       </Link>

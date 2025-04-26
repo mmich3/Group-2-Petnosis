@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Select from 'react-select';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import catIcon from '../images/cat422.jpg';
 import BackButton from '../components/BackButton';
@@ -239,9 +238,11 @@ const AddCat = () => {
             </div>
           </div>
           <div className='flex justify-center'>
-            <button onClick={handle} className='btn btn-success w-50 text-white'>
-              Save
-            </button>
+            <Link to='/Home'>
+              <button onClick={handle} className='btn btn-success w-50 text-white'>
+                Save
+              </button>
+            </Link>
           </div>
         </div>
       </div>
