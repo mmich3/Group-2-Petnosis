@@ -3,8 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
 import Navbar from '../components/Navbar';
-import catIcon from '../images/cat422.jpg'
-import BackButton from '../components/BackButton';
+import catIcon from '../images/cat422.jpg';
 
 const catBreeds = [
   { value: 'abysinnian', label: 'Abyssinian' },
@@ -51,219 +50,204 @@ const catBreeds = [
 ];
 
 const AddCat = () => {
-    const [type, setType] = useState('');
-    const [name, setName] = useState('');
-    const [bday, setBday] = useState(null);
-    const [breed, setBreed] = useState('');
-    const [size, setSize] = useState(null);
-    const [weight, setWeight] = useState(null);
-    const [isNameFilled, setNameFilled] = useState(false);
-    const [isBdayFilled, setBdayFilled] = useState(false);
-    const [isBreedFilled, setBreedFilled] = useState(false);
-    const [isSizeFilled, setSizeFilled] = useState(false);
-    const [isWeightFilled, setWeightFilled] = useState(false);
-    const [handleClicked, setHandleClicked] = useState(false);
-  
-    const handle = () => {
-  
-      setHandleClicked(true);
-  
-          if (!name) {
-              setNameFilled(false);
-              return;
-          } else {
-              setNameFilled(true);
-          }
-  
-          if (!bday) {
-              setBdayFilled(false);
-              return;
-          } else {
-              setBdayFilled(true);
-          }
-  
-          if (!breed) {
-              setBreedFilled(false);
-              return;
-          } else {
-              setBreedFilled(true);
-          }
-  
-          if (!size) {
-              setSizeFilled(false);
-              return;
-          } else {
-              setSizeFilled(true);
-          }
-  
-          if (!weight) {
-              setWeightFilled(false);
-              return;
-          } else {
-              setWeightFilled(true);
-          }
-  
-      const catData = JSON.parse(localStorage.getItem('cats')) || [];
-  
-      const cat = {
-        name,
-        birthday: bday ? bday.toISOString() : '',
-        breed,
-        size,
-        catWeight: weight,
-      };
-  
-      catData.push(cat);
-      localStorage.setItem('cats', JSON.stringify(catData));
-  
-      
-  
+  const [name, setName] = useState('');
+  const [bday, setBday] = useState(null);
+  const [breed, setBreed] = useState('');
+  const [size, setSize] = useState('');
+  const [weight, setWeight] = useState(null);
+  const [isNameFilled, setNameFilled] = useState(false);
+  const [isBdayFilled, setBdayFilled] = useState(false);
+  const [isBreedFilled, setBreedFilled] = useState(false);
+  const [isSizeFilled, setSizeFilled] = useState(false);
+  const [isWeightFilled, setWeightFilled] = useState(false);
+  const [handleClicked, setHandleClicked] = useState(false);
+
+  const handle = () => {
+    setHandleClicked(true);
+
+    if (!name) {
+      setNameFilled(false);
+      return;
+    } else {
+      setNameFilled(true);
+    }
+
+    if (!bday) {
+      setBdayFilled(false);
+      return;
+    } else {
+      setBdayFilled(true);
+    }
+
+    if (!breed) {
+      setBreedFilled(false);
+      return;
+    } else {
+      setBreedFilled(true);
+    }
+
+    if (!size) {
+      setSizeFilled(false);
+      return;
+    } else {
+      setSizeFilled(true);
+    }
+
+    if (!weight) {
+      setWeightFilled(false);
+      return;
+    } else {
+      setWeightFilled(true);
+    }
+
+    const catData = JSON.parse(localStorage.getItem('cats')) || [];
+
+    const cat = {
+      name,
+      birthday: bday ? bday.toISOString() : '',
+      breed,
+      size,
+      catWeight: weight,
     };
-  
-    return (
-      <div className='min-h-screen'>
-        <BackButton />
-        <div className='flex flex-col items-center space-y-4 py-20'>
-          <div className='flex items-center justify-center'>
-            <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Enter Cat Info</p>
-          </div>
 
-          <div className='flex items-center justify-center gap-8'>
-            <img src= {catIcon} alt="cat" className="rounded-full shadow-lg w-38 h-auto"/>
-        
-          </div>
+    catData.push(cat);
+    localStorage.setItem('cats', JSON.stringify(catData));
+  };
 
-          <div className="text-blue-500 text-m font-bold">
-                Edit
-            </div>
+  return (
+    <div className='flex min-h-screen flex-col items-center justify-between'>
+      <BackButton />
+      <span className='mt-5 flex items-center'>
+        <p className='text-5xl font-bold text-[#ca9973]'>Enter Cat Info</p>
+      </span>
 
-          <div className='flex items-center justify-center gap-8'>
-          </div>
-  
-          <div className='flex items-center justify-center gap-8'>
-            <div>
-              <div className='flex flex-row'>
-                      <label className="text-lg font-semibold mb-2 text-red-500 ml-4">*&nbsp;</label>
-                      <label className="block w-[110px] text-lg font-semibold mb-2 text-gray-700 ">Name:</label>
-                  </div>
-              <input
-                type='text'
-                className='input input-bordered w-40 ml-4'
-                value={name}
-                placeholder='Ex: Luna'
-                onChange={(e) => setName(e.target.value)}
-              />
-  
-              {!isNameFilled && handleClicked && (
-                  <p className="text-red-500 text-sm ml-4">
-                  Please enter a name.
-                  </p>
-              )}
-  
-            </div>
-  
-            <div>
-              <div className='flex flex-row'>
-                      <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
-                      <label className="block w-[110px] text-lg font-semibold mb-2 text-gray-700">Birth Date:</label>
-              </div>
-              <DatePicker
-                popperClassName='my-datepicker'
-                selected={bday}
-                onChange={(e) => setBday(e)}
-                dateFormat='dd/MM/yyyy'
-                placeholderText='DD/MM/YYYY'
-                showMonthDropdown
-                showYearDropdown
-                dropdownMode='select'
-                className="input input-bordered w-40 mr-4"
-              />
-              
-              {!isBdayFilled && handleClicked && (
-                  <p className="text-red-500 text-sm">
-                  Please enter a birth date
-                  </p>
-              )} 
-  
-            </div>
-          </div>
-  
-          <div className='flex items-center justify-center gap-8'>
-            <div>
-              <div className='flex flex-row'>
-                      <label className="text-lg font-semibold mb-2 text-red-500 ml-4">*&nbsp;</label>
-                      <label className=" block w-[110px] text-lg font-semibold mb-2 text-gray-700">Breed:</label>
-              </div>
-              <Select
-                options={catBreeds}
-                value={catBreeds.find((breedObj) => breedObj.value === breed)}
-                onChange={(e) => setBreed(e.value)}
-                placeholder='Select'
-                className="input-bordered  w-40 ml-4"
-              />
-              {!isBreedFilled && handleClicked && (
-                      <p className="text-red-500 text-sm ml-4">
-                      Please enter a breed
-                      </p>
-                  )} 
-            </div>
-  
-            <div>
-              <div className='flex flex-row'>
-                      <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
-                      <label className="block text-lg font-semibold mb-2 text-gray-700">Size:</label>
-              </div>
-              <select
-                value={size}
-                onChange={(e) => setSize(e.target.value)}
-                className="input input-bordered w-40 mr-4"
-              >
-                <option value=''>Select</option>
-                <option value='small'>Small</option>
-                <option value='medium'>Medium</option>
-                <option value='large'>Large</option>
-              </select>
-  
-              {!isSizeFilled && handleClicked && (
-                  <p className="text-red-500 text-sm">
-                  Please enter a cat size
-                  </p>
-              )}   
-            </div>
-          </div>
-  
-          <div className='mb-8 flex items-center justify-center gap-8'>
-            <div>
+      <div className='flex flex-col items-center'>
+        <span className='flex items-center justify-center'>
+          <img src={catIcon} alt='cat' className='h-auto w-38 rounded-full shadow-lg' />
+        </span>
+        <span className='text-m mt-1 font-bold text-blue-500'>Edit</span>
+      </div>
+
+      <div className='grid w-max max-w-4xl grid-rows-3 gap-5'>
+        <div className='grid grid-cols-2 gap-5'>
+          {/* Name */}
+          <div className='flex w-max flex-col'>
             <div className='flex flex-row'>
-                      <label className="text-lg font-semibold mb-2 text-red-500">*&nbsp;</label>
-                      <label className="block w-[110px] text-lg font-semibold mb-2 text-gray-700">Weight (lbs):</label>
-                  </div>
-                  <input
-                      type='number'
-                      placeholder='Enter...'
-                      value={weight}
-                      min={0}
-                      onChange={(e) => setWeight(e.target.value)}
-                      className="input input-bordered w-40"
-                  />
-              {!isWeightFilled && handleClicked && (
-                  <p className="text-red-500 text-sm">
-                  Please enter a weight
-                  </p>
-              )} 
+              <label className='mb-1 text-lg font-semibold text-red-500'>*&nbsp;</label>
+              <label className='mb-1 text-lg font-semibold text-gray-700'>Name:</label>
             </div>
+            <input
+              type='text'
+              className='input input-bordered w-40'
+              value={name}
+              placeholder='Ex: Luna'
+              onChange={(e) => setName(e.target.value)}
+            />
+            {!isNameFilled && handleClicked && (
+              <p className='mt-0.5 text-sm text-red-500'>Please enter a name.</p>
+            )}
           </div>
-  
-          <div>
-            <button onClick={handle} className='btn btn-success text-white'>
-              Save
-            </button>
+
+          {/* Birthdate */}
+          <div className='flex flex-col'>
+            <div className='flex flex-row'>
+              <label className='mb-1 text-lg font-semibold text-red-500'>*&nbsp;</label>
+              <label className='mb-1 text-lg font-semibold text-gray-700'>Birth Date:</label>
+            </div>
+            <input
+              type='date'
+              value={bday ? bday.toISOString().split('T')[0] : ''}
+              onChange={(e) => setBday(new Date(e.target.value))}
+              placeholder='DD/MM/YYYY'
+              className='input input-bordered w-40'
+            />
+            {!isBdayFilled && handleClicked && (
+              <p className='mt-0.5 text-sm text-red-500'>Please enter a birth date</p>
+            )}
           </div>
         </div>
-        <Navbar />
+
+        <div className='grid grid-cols-2 gap-5'>
+          {/* Breed */}
+          <div className='flex flex-col'>
+            <div className='flex flex-row'>
+              <label className='mb-1 text-lg font-semibold text-red-500'>*&nbsp;</label>
+              <label className='mb-1 block text-lg font-semibold text-gray-700'>Breed:</label>
+            </div>
+            <select
+              value={breed}
+              onChange={(e) => setBreed(e.target.value)}
+              className='select select-bordered w-40'
+            >
+              <option value='' disabled>
+                Select
+              </option>
+              {catBreeds.map((breedObj) => (
+                <option key={breedObj.value} value={breedObj.value}>
+                  {breedObj.label}
+                </option>
+              ))}
+            </select>
+            {!isBreedFilled && handleClicked && (
+              <p className='text-sm text-red-500'>Please enter a breed</p>
+            )}
+          </div>
+
+          {/* Size */}
+          <div className='flex flex-col'>
+            <div className='flex flex-row'>
+              <label className='text-lg font-semibold text-red-500'>*&nbsp;</label>
+              <label className='block text-lg font-semibold text-gray-700'>Size:</label>
+            </div>
+            <select
+              value={size}
+              onChange={(e) => setSize(e.target.value)}
+              className='select select-bordered mr-4 w-40'
+            >
+              <option value='' disabled>
+                Select
+              </option>
+              <option value='Small'>Small</option>
+              <option value='Medium'>Medium</option>
+              <option value='Large'>Large</option>
+            </select>
+            {!isSizeFilled && handleClicked && (
+              <p className='text-sm text-red-500'>Please enter a cat size</p>
+            )}
+          </div>
+        </div>
+
+        {/* Weight */}
+        <div className='flex justify-center'>
+          <div className='flex flex-col'>
+            <div className='flex flex-row'>
+              <label className='text-lg font-semibold text-red-500'>*&nbsp;</label>
+              <label className='block w-[110px] text-lg font-semibold text-gray-700'>
+                Weight (lbs):
+              </label>
+            </div>
+            <input
+              type='number'
+              placeholder='Enter...'
+              value={weight}
+              min={0}
+              onChange={(e) => setWeight(e.target.value)}
+              className='input input-bordered w-40'
+            />
+            {!isWeightFilled && handleClicked && (
+              <p className='text-sm text-red-500'>Please enter a weight</p>
+            )}
+          </div>
+        </div>
       </div>
-    );
-  };
-  
-  export default AddCat;
-  
+      <div>
+        <button onClick={handle} className='btn btn-success text-white'>
+          Save
+        </button>
+      </div>
+      <Navbar />
+    </div>
+  );
+};
+
+export default AddCat;
