@@ -4,19 +4,17 @@ import BackButton from '../components/BackButton';
 
 const PetHistory = () => {
   return (
-    <div className='min-h-screen'>
+    <div className='flex min-h-screen flex-col'>
       <BackButton />
-      <div className='flex min-h-screen flex-col items-center justify-center'>
+      <div className='flex grow flex-col items-center justify-center'>
         <div className='hero-content mb-5 text-center'>
           <p className='text-5xl font-bold text-[#ca9973]'>Pet's History</p>
         </div>
 
-        <p style={{fontSize: 30}}>Petnosis History</p>
-        <div style={{ borderTop: '2px solid black', width: 300, height:35 }}></div>
-        <p style={{padding: 20}}>Allergic Dermatitis - 10/12/2024</p>
-        <p style={{padding: 20}}>Mild Arthritis - 6/5/2024</p>
-        <p style={{padding: 20}}>Kennel Cough - 10/10/2024</p>
-        <div style={{height:200}}></div>
+        <p className='hero-content'>Petnosis History</p>
+        <p>Allergic Dermatitis - 10/12/2024</p>
+        <p>Mild Arthritis - 6/5/2024</p>
+        <p>Kennel Cough - 10/10/2024</p>
       </div>
       <Navbar />
     </div>

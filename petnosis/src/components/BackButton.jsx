@@ -6,7 +6,7 @@ const BackButton = () => {
 
   return (
     <button
-      className='btn btn-outline btn-circle fixed m-2 border-black text-black hover:text-white'
+      className='btn btn-outline btn-circle fixed top-0 left-0 z-10 m-2'
       onClick={() => navigate(-1)}
     >
       <FaChevronLeft />

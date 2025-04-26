@@ -1,28 +1,21 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Map from './Map';
+import Map from '../components/Map';
 import '../index.css';
 import BackButton from '../components/BackButton';
 
 const PickAVet = () => {
   return (
-    <div className='relative min-h-screen'>
+    <div className='flex min-h-screen flex-col'>
       <BackButton />
-      <div className='flex min-h-screen flex-col items-center justify-start pt-10'>
-        
-        <Map height="80vh" width="100%"/>
+      <div className='flex grow flex-col items-center justify-center'>
+        <Map />
         <div className='hero'>
-          <div className='hero-content mt-10'>
-            
-          </div>
+          <div className='hero-content'></div>
         </div>
       </div>
       <Navbar />
     </div>
-
-    
-
-    
   );
 };
 

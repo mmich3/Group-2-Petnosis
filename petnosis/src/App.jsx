@@ -21,6 +21,10 @@ function App() {
       path: '/',
       element: <Home />,
     },
+    { 
+      path: '/Home', 
+      element: <Home /> 
+    },
     {
       path: '/AddPet',
       element: <AddPet />,

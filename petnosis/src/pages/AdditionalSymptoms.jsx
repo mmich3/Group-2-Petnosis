@@ -5,9 +5,9 @@ import BackButton from '../components/BackButton';
 
 const AdditionalSymptoms = () => {
   return (
-    <div className='min-h-screen'>
+    <div className='flex min-h-screen flex-col'>
       <BackButton />
-      <div className='flex min-h-screen flex-col items-center justify-center'>
+      <div className='flex grow flex-col items-center justify-center'>
         <div className='hero-content mb-5 text-center'>
           <p className='text-5xl font-bold text-[#ca9973]'>Additional Info</p>
         </div>

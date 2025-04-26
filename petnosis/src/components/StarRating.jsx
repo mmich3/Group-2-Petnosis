@@ -9,18 +9,18 @@ const StarRating = ({ rating }) => {
   const stars = [];
 
   for (let i = 0; i < fullStars; i++) {
-    stars.push(<FaStar key={`full-${i}`} className="text-yellow-500" />);
+    stars.push(<FaStar key={`full-${i}`} className='text-yellow-500' />);
   }
 
   if (hasHalfStar) {
-    stars.push(<FaStarHalfAlt key="half" className="text-yellow-500" />);
+    stars.push(<FaStarHalfAlt key='half' className='text-yellow-500' />);
   }
 
   while (stars.length < totalStars) {
-    stars.push(<FaRegStar key={`empty-${stars.length}`} className="text-yellow-500" />);
+    stars.push(<FaRegStar key={`empty-${stars.length}`} className='text-yellow-500' />);
   }
 
-  return <div className="flex">{stars}</div>;
+  return <div className='flex'>{stars}</div>;
 };
 
 export default StarRating;
