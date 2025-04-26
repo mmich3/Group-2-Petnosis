@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-<<<<<<< HEAD
-@import "flowbite/src/themes/default";
 
 
 :root {
@@ -21,10 +19,10 @@ body{
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-=======
+}
+
 @plugin "daisyui" {
   themes: light --default;
->>>>>>> 126dc2bf40ab2957c6d39b6847524623081773ee
 }
 
 .my-datepicker {
