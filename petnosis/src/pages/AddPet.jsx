@@ -13,10 +13,12 @@ const AddPet = () => {
         </div>
         <div className='flex w-40 flex-col'>
           <Link to='/AddCat'>
-            <button className='btn btn-xl btn-accent btn-wide btn-circle mb-5'>Cat</button>
+            <button className='btn btn-xl btn-accent btn-wide btn-circle mb-5 text-white'>
+              Cat
+            </button>
           </Link>
           <Link to='/AddDog'>
-            <button className='btn btn-xl btn-secondary btn-wide btn-circle'>Dog</button>
+            <button className='btn btn-xl btn-secondary btn-wide btn-circle text-white'>Dog</button>
           </Link>
         </div>
       </div>
