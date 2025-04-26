@@ -35,7 +35,7 @@ const SelectPet = () => {
         ) : (
           pets.map((pet, index) => (
             <Link key={index} to='/PetOption'>
-              <div className='h-48 overflow-auto border p-4'>
+              <div className='items-center overflow-auto p-2 flex flex-col'>
                 <img
                   src={pet.type === 'dog' ? dogIcon : catIcon}
                   alt={pet.type}
