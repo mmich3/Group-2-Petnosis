@@ -17,24 +17,24 @@ const AdditionalSymptoms = () => {
             <div style={{textAlign: 'center'}}>
                 <b style={{textAlign: 'center', fontSize: 35, color:'#4B7A82'}}>1. Limping</b>
                 <div style={{display: 'flex', marginBottom: 10, padding: 15}}>
-                    <p style = {{padding: 3, fontSize: 25}}>From:</p>
-                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:15, color: 'grey', backgroundColor: 'white'}}></input>
-                    <p style = {{paddingLeft: 10, padding: 3, fontSize: 25}}>To:</p>
-                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:15, color: 'grey', backgroundColor: 'white'}}></input>
+                    <p style = {{padding: 3, fontSize: 22}}>From:</p>
+                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:12, color: 'grey', backgroundColor: 'white'}}></input>
+                    <p style = {{paddingLeft: 10, padding: 3, fontSize: 22}}>To:</p>
+                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:12, color: 'grey', backgroundColor: 'white'}}></input>
                 </div>
                 <b style={{textAlign: 'center', fontSize: 35, color:'#4B7A82'}}>2. Coughing</b>
                 <div style={{display: 'flex', marginBottom: 10, padding: 15}}>
-                    <p style = {{padding: 3, fontSize: 25}}>From:</p>
-                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:15, color: 'grey', backgroundColor: 'white'}}></input>
-                    <p style = {{paddingLeft: 10, padding: 3, fontSize: 25}}>To:</p>
-                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:15, color: 'grey', backgroundColor: 'white'}}></input>
+                    <p style = {{padding: 3, fontSize: 22}}>From:</p>
+                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:12, color: 'grey', backgroundColor: 'white'}}></input>
+                    <p style = {{paddingLeft: 10, padding: 3, fontSize: 22}}>To:</p>
+                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:12, color: 'grey', backgroundColor: 'white'}}></input>
                 </div>
                 <b style={{textAlign: 'center', fontSize: 35, color:'#4B7A82'}}>3. Lack of appetite</b>
                 <div style={{display: 'flex', marginBottom: 10, padding: 15}}>
-                    <p style = {{padding: 3, fontSize: 25}}>From:</p>
-                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:15, color: 'grey', backgroundColor: 'white'}}></input>
-                    <p style = {{paddingLeft: 10, padding: 3, fontSize: 25}}>To:</p>
-                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:15, color: 'grey', backgroundColor: 'white'}}></input>
+                    <p style = {{padding: 3, fontSize: 22}}>From:</p>
+                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:12, color: 'grey', backgroundColor: 'white'}}></input>
+                    <p style = {{paddingLeft: 10, padding: 3, fontSize: 22}}>To:</p>
+                    <input type='date' style={{border: '1px solid black', borderRadius: '4px' ,width: 110, fontSize:12, color: 'grey', backgroundColor: 'white'}}></input>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@ const AdditionalSymptoms = () => {
         <div style={{marginTop: 50, fontSize: 23}}>
             <p style={{color: 'grey'}}>-Optional-</p>
             <p style={{color: '#46A3FF'}}>DESCRIPTION:</p>
-            <input type='text' style={{border: '1px solid black', borderRadius: '9px' ,width: 330, height: 40, paddingLeft: 20}} onFocus={(e) => e.target.value = ''} defaultValue="Start typing..."></input>
+            <input type='text' style={{border: '1px solid black', borderRadius: '9px' ,width: 355, height: 40, paddingLeft: 20}} onFocus={(e) => e.target.value = ''} defaultValue="Start typing..."></input>
         </div>
 
         <div className='hero' style={{justifyContent: 'right'}}>
