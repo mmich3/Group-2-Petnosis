@@ -23,6 +23,7 @@ body{
 
 @plugin "daisyui" {
   themes: light --default;
+
 }
 
 .my-datepicker {
