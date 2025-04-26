@@ -7,10 +7,10 @@ import cough from '../images/dogCough.jpg';
 
 const Results = () => {
   return (
-    <div className='flex min-h-screen flex-col'>
+    <div className='flex min-h-screen flex-col overflow-hidden'>
       <BackButton />
       <div className='flex grow flex-col items-center justify-center'>
-        <div className='hero-content mb-5 text-center'>
+        <div className='hero-content mb-5 flex flex-col text-center'>
           <p className='text-5xl font-bold text-[#ca9973]'>Results</p>
           <p className='font-bold text-red-400'> Closest Matches</p>
         </div>

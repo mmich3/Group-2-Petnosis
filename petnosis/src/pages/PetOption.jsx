@@ -9,8 +9,12 @@ const PetOption = () => {
       <BackButton />
       <div className='flex grow flex-col items-center justify-center'>
         <div className='hero-content mb-5 text-center'>
-          <p className='text-5xl font-bold text-[#ca9973]'>Pet Option</p>
+          <p className='mt-20 text-5xl font-bold text-[#ca9973]'>Charlie</p>
         </div>
+
+        <img src={dogIcon} alt='dog icon' className='h-auto w-40 rounded-full shadow-lg' />
+        <p className='mt-2 font-bold text-red-500'>Edit Pet information</p>
+
         <div className='flex flex-col'>
           <div className='hero-content mt-10 flex flex-col'>
             <Link to='/PetHistory'>

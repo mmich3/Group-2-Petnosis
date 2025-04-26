@@ -1,22 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import { FaChevronLeft } from 'react-icons/fa';
 import BackButton from '../components/BackButton';
 import Search from '../components/Search';
-import Voice from '../components/Voice';
 
 const PetSymptoms = () => {
   return (
     <div className='flex min-h-screen flex-col'>
       <BackButton />
-
-      <div className='flex grow flex-col items-center justify-around'>
-        <div className='flex flex-col items-center justify-center'>
-          <div className='hero-content mb-5 text-center'>
-            <p className='text-5xl font-bold text-[#ca9973]'>Pet's Symptoms</p>
-          </div>
-
+      <div className='flex grow flex-col items-center justify-center'>
+        <p className='mb-5 text-center text-5xl font-bold text-[#ca9973]'>Check all that apply</p>
+        <div
+          className='mb-13 h-120 w-100 rounded-lg p-4 shadow-md'
+          style={{ backgroundColor: '#dcdcef' }}
+        >
           <div className='flex w-full justify-center'>
             <Search />
           </div>
