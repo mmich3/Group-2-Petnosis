@@ -26,7 +26,7 @@ const PetSymptoms = () => {
             </div>
 
         <p style={{color: 'red', padding: 10}}>Check all that apply</p>
-        <div className="w-100 h-120 rounded-lg shadow-md p-4" style={{backgroundColor: '#dcdcef'}}>
+        <div className="w-100 h-120 rounded-lg shadow-md p-4 mb-13" style={{backgroundColor: '#dcdcef'}}>
 
         
         <div style={{display: 'flex', flexDirection: 'column', alignItems:'flex-start'}}>

@@ -8,7 +8,6 @@ import BackButton from '../components/BackButton';
 import Search from '../components/Search';
 import Voice from '../components/Voice';
 
-
 const SelectPet = () => {
   const [pets, setPets] = useState([]);
 
