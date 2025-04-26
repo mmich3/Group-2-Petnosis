@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import VetClinic from './VetClinic';
-import L from 'leaflet';
+import React, { useEffect, useState } from "react";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import VetClinic from "../components/VetClinic";
+import L from "leaflet";
 
 // Optional: custom icon for user location
 const userIcon = new L.Icon({
-  iconUrl: 'https://cdn-icons-png.flaticon.com/512/1320/1320933.png',
+  iconUrl: "https://cdn-icons-png.flaticon.com/512/1320/1320933.png",
   iconSize: [32, 32],
 });
 
