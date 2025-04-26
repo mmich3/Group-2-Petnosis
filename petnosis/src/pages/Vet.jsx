@@ -78,12 +78,12 @@ export default function Vet() {
   if (!vet) return <div className='text-center mt-10 text-xl text-red-500'>Vet clinic not found</div>;
 
   return (
-    <div className='min-h-screen '>
+    <div className='flex min-h-screen flex-col bg-white'>
       <BackButton />
-      <div className='hero min-h-screen'>
+      <div className='mx-auto px-4 py-6'>
         <div className='card w-[80vw] max-w-2xl bg-amber-100 shadow-2xl'>
           <figure>
-            <img src={vet.url} alt={vet.title} className='w-full object-cover max-h-96' />
+            <img src={vet.url} alt={vet.title} className='w-full object-cover max-h-50' />
           </figure>
           <div className='card-body'>
             <h1 className='text-3xl font-bold text-[#ca9973] text-center'>{vet.title}</h1>

@@ -20,7 +20,7 @@ const DistanceSlider = ({ onChange }) => {
         max="25"
         value={value}
         onChange={handleChange}
-        className="range range-primary"
+        className="range range-primary w-full"
       />
       <div className="w-full flex justify-between text-xs px-1 mt-1">
         <span>1</span>
