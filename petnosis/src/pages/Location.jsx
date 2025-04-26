@@ -4,8 +4,8 @@ import Navbar from '../components/Navbar';
 
 const Location = () => {
   return (
-    <div className='min-h-screen'>
-      <div className='flex min-h-screen flex-col items-center justify-center'>
+    <div className='flex min-h-screen flex-col'>
+      <div className='flex grow flex-col items-center justify-center'>
         <div className='hero-content'>
           <p className='mb-5 text-5xl font-bold text-[#ca9973]'>Location</p>
         </div>
