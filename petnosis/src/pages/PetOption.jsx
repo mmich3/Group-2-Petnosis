@@ -16,12 +16,10 @@ const PetOption = () => {
     const cats = updatedPets.filter((p) => p.type === 'cat');
     sessionStorage.setItem('dogs', JSON.stringify(dogs));
     sessionStorage.setItem('cats', JSON.stringify(cats));
-
-    navigate('/SelectPet');
   };
 
   return (
-    <div className='flex min-h-screen flex-col items-center justify-center'>
+    <div className='flex min-h-screen flex-col'>
       <BackButton />
       <div className='flex grow flex-col items-center justify-center'>
         <div className='hero-content mb-5 text-center'>
@@ -37,15 +35,17 @@ const PetOption = () => {
 
         <div className='flex flex-col'>
           <div className='hero-content mt-10 flex flex-col'>
-            <Link to='/PetHistory'>
+            <Link to='/PetHistory' state={{ pet }}>
               <button className='btn btn-accent btn-circle w-40'>View Diagnosis History</button>
             </Link>
             <Link to='/PetSymptoms'>
               <button className='btn btn-secondary btn-circle w-40'>New Diagnosis</button>
             </Link>
-            <button className='btn btn-error btn-circle w-40' onClick={handleRemove}>
-              Remove Pet
-            </button>
+            <Link to='/SelectPet'>
+              <button className='btn btn-error btn-circle w-40' onClick={handleRemove}>
+                Remove Pet
+              </button>
+            </Link>
           </div>
         </div>
       </div>
