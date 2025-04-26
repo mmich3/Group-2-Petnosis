@@ -120,7 +120,7 @@ const AddCat = () => {
       <div className='flex grow flex-col items-center justify-center'>
         <BackButton />
         <div className='hero flex flex-col justify-center'>
-          <p className='hero-content text-5xl font-bold text-[#ca9973]'>Enter Dog Info</p>
+          <p className='hero-content text-5xl font-bold text-[#ca9973]'>Enter Cat Info</p>
           <span className='flex justify-center'>
             <img src={catIcon} alt='cat' className='h-auto w-38 rounded-full shadow-lg' />
           </span>
