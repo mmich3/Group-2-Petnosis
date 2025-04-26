@@ -16,10 +16,10 @@ const PetOption = () => {
         <div className='flex flex-col mb-95'>
           <div className='flex flex-col hero-content mt-10'>
             <Link to='/PetHistory'>
-              <button className='btn btn-accent text-white rounded-full w-40 h-15'>View Diagnosis History</button>
+              <button className='btn btn-accent text-white rounded-full w-50 h-17 text-lg'>View Diagnosis History</button>
             </Link>
             <Link to='/PetSymptoms'>
-              <button className='btn btn-secondary rounded-full w-40 h-15 mt-3'>New Diagnosis</button>
+              <button className='btn btn-secondary rounded-full w-50 h-17 mt-3 text-lg'>New Diagnosis</button>
             </Link>
           </div>
           

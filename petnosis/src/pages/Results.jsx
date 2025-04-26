@@ -15,7 +15,7 @@ const Results = () => {
           <p className='text-5xl font-bold text-[#ca9973]'>Results</p>
           <p className='text-red-400 font-bold'> Closest Matches</p>
         </div>
-        <div className="w-110 h-120 bg-green-400 rounded-lg shadow-md p-4">
+        <div className="w-105 h-125 bg-green-400 rounded-lg shadow-md p-4">
           
         
           <div className='flex flex-col text-white'>

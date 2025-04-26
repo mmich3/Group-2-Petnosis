@@ -16,7 +16,7 @@ const PetSymptoms = () => {
         </div>
         <input
                 type='text'
-                className='pl-10 input input-bordered w-90 ml-4 rounded-full'
+                className='pl-10 input input-bordered w-90 ml-4 rounded-full bg-gray-50'
                 placeholder='Search symptoms...'
                 onChange={(e) => setName(e.target.value)}
             />
@@ -25,36 +25,48 @@ const PetSymptoms = () => {
                 <Voice />
             </div>
 
-        <p style={{color: '#878787', padding: 10}}>Check all that apply</p>
+        <p style={{color: 'red', padding: 10}}>Check all that apply</p>
+        <div className="w-100 h-120 rounded-lg shadow-md p-4" style={{backgroundColor: '#dcdcef'}}>
+
+        
         <div style={{display: 'flex', flexDirection: 'column', alignItems:'flex-start'}}>
             <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
-                <input style={{height: 50, width: 50}} type="checkbox" />
-                <b style={{fontSize: 30, color: '#4B7A82', paddingLeft: 10, paddingTop: 3}}>Limping</b>
+                <input style={{height: 30, width: 30, marginTop: 20,}} type="checkbox" />
+                <b style={{marginTop: 20, fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Limping</b>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
-                <input style={{height: 50, width: 50}} type="checkbox" />
-                <b style={{fontSize: 30, color: '#4B7A82', paddingLeft: 10, paddingTop: 3}}>Diarrhea</b>
+                <input style={{height: 30, width: 30}} type="checkbox" />
+                <b style={{fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Diarrhea</b>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
-                <input style={{height: 50, width: 50}} type="checkbox" />
-                <b style={{fontSize: 30, color: '#4B7A82', paddingLeft: 10, paddingTop: 3}}>Coughing</b>
+                <input style={{height: 30, width: 30}} type="checkbox" />
+                <b style={{fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Coughing</b>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
-                <input style={{height: 50, width: 50}} type="checkbox" />
-                <b style={{fontSize: 30, color: '#4B7A82', paddingLeft: 10, paddingTop: 3}}>Loss of appetite</b>
+                <input style={{height: 30, width: 30}} type="checkbox" />
+                <b style={{fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Loss of appetite</b>
             </div>
             <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
-                <input style={{height: 50, width: 50}} type="checkbox" />
-                <b style={{fontSize: 30, color: '#4B7A82', paddingLeft: 10, paddingTop: 3}}>Other</b>
+                <input style={{height: 30, width: 30}} type="checkbox" />
+                <b style={{fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Excessive Shedding</b>
+            </div>
+            <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
+                <input style={{height: 30, width: 30}} type="checkbox" />
+                <b style={{fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Drooling</b>
+            </div>
+            <div style={{display: 'flex', justifyContent: 'center', padding: 10}}>
+                <input style={{height: 30, width: 30}} type="checkbox" />
+                <b style={{fontSize: 20, color: '#096868', paddingLeft: 10, paddingTop: 3}}>Other</b>
             </div>
         </div>
         <div className='hero' style={{justifyContent: 'right'}}>
-          <div className='hero-content mt-10'>
+          <div className='hero-content '>
             <Link to='/AdditionalSymptoms'>
-              <button className='btn btn-accent'>Next</button>
+              <button className='btn btn-accent text-white text-lg'>Next</button>
             </Link>
           </div>
         </div>
+      </div>
       </div>
       <Navbar />
     </div>

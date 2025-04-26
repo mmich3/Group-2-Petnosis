@@ -35,7 +35,7 @@ const SelectPet = () => {
           
           <input
                 type='text'
-                className='pl-10 input input-bordered w-90 ml-4 rounded-full'
+                className='pl-10 input input-bordered w-90 ml-4 rounded-full bg-gray-50'
                 placeholder='Search for pet...'
                 onChange={(e) => setName(e.target.value)}
             />
@@ -55,8 +55,10 @@ const SelectPet = () => {
                     src={pet.type === 'dog' ? dogIcon : catIcon}
                     alt={pet.type}
                     className="rounded-full shadow-lg w-24 h-auto"
+                    
                   />
                     <p className="text-lg font-semibold">{pet.name}</p>
+                    
                   </div>
                 </Link>
               ))
