@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import catIcon from '../images/cat422.jpg';
 import BackButton from '../components/BackButton';
@@ -61,6 +61,7 @@ const AddCat = () => {
   const [isSizeFilled, setSizeFilled] = useState(false);
   const [isWeightFilled, setWeightFilled] = useState(false);
   const [handleClicked, setHandleClicked] = useState(false);
+  const navigate = useNavigate();
 
   const handle = () => {
     setHandleClicked(true);
@@ -112,6 +113,8 @@ const AddCat = () => {
 
     catData.push(cat);
     sessionStorage.setItem('cats', JSON.stringify(catData));
+
+    navigate('/Home'); // Navigate only after successful save
   };
 
   return (
@@ -238,11 +241,9 @@ const AddCat = () => {
             </div>
           </div>
           <div className='flex justify-center'>
-            <Link to='/Home'>
-              <button onClick={handle} className='btn btn-success w-50 text-white'>
-                Save
-              </button>
-            </Link>
+            <button onClick={handle} className='btn btn-success w-50 text-white'>
+              Save
+            </button>
           </div>
         </div>
       </div>
